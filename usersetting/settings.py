@@ -71,7 +71,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'usersetting.wsgi.application'
 
-
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
@@ -80,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'try1',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': 'Lwy5721096',
         'HOST': 'localhost',
         'PORT': '3306'
     }

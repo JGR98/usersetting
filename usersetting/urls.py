@@ -1,3 +1,4 @@
+#coding=utf8
 """usersetting URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -13,13 +14,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
 from django.conf.urls import url, include
 from django.contrib import admin
+from users import views
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
     url(r'^admin/', admin.site.urls),
     # 别忘记在顶部引入 include 函数
     url(r'^users/', include('users.urls')),
+    url(r'^users/', include('django.contrib.auth.urls')),
+    url(r'^$', views.index, name='index')
 ]
